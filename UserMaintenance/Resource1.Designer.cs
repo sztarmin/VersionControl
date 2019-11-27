@@ -70,6 +70,15 @@ namespace UserMaintenance {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kijelöltek törlése.
+        /// </summary>
+        internal static string delbtn {
+            get {
+                return ResourceManager.GetString("delbtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Teljes név.
         /// </summary>
         internal static string FullName {

@@ -21,12 +21,23 @@ namespace UserMaintenance
             lblLastName.Text = Resource1.FullName;
             btnAdd.Text = Resource1.Add;
             button1.Text = Resource1.wtf;
+            button2.Text = Resource1.delbtn;
 
             listUsers.DataSource = users;
             listUsers.ValueMember = "ID";
             listUsers.DisplayMember = "FullName";
+            listUsers.SelectionMode = SelectionMode.MultiExtended;
 
             btnAdd.Click += BtnAdd_Click;
+            button2.Click += Button2_Click;
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            for (int i = listUsers.SelectedIndices.Count-1; i>= 0; i--)
+            {
+                listUsers.Items.RemoveAt(listUsers.SelectedIndices[i]);
+            }
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
